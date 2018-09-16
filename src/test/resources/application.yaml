@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: Istanbul Coders Test Containers
+  rabbitmq:
+       host: 127.0.0.1
+       username: guest
+       password: guest
+       virtual-host: /
+       listener:
+             simple:
+               concurrency: 5
+               max-concurrency: 30
+               retry:
+                 enabled: true
+                 initial-interval: 1000ms
+                 multiplier: 2
+                 max-attempts: 5
+mq:
+  user:
+    update:
+      exchange-name: istanbulcoders.user.api.user.changed.events
+      queue-name: istanbulcoders.user.api.user.changed.events
+      dead-letter-queue-name: istanbulcoders.user.api.user.changed.dead-letter
+      args:
+        x-dead-letter-exchange:
+        x-dead-letter-routing-key: ${mq.user.update.dead-letter-queue-name}
+
+---
+spring:
+  profiles: it
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults:
