@@ -1,7 +1,7 @@
 package com.coders.istanbul.testcontainers.consumer;
 
 
-import com.coders.istanbul.testcontainers.UserService;
+import com.coders.istanbul.testcontainers.service.UserService;
 import com.coders.istanbul.testcontainers.domain.User;
 import com.coders.istanbul.testcontainers.model.dto.UserQueueDto;
 import org.slf4j.Logger;

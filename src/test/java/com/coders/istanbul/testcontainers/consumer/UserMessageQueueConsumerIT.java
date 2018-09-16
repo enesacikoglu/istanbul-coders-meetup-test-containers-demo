@@ -1,6 +1,6 @@
 package com.coders.istanbul.testcontainers.consumer;
 
-import com.coders.istanbul.testcontainers.UserService;
+import com.coders.istanbul.testcontainers.service.UserService;
 import com.coders.istanbul.testcontainers.model.dto.UserQueueDto;
 import org.junit.ClassRule;
 import org.junit.Test;

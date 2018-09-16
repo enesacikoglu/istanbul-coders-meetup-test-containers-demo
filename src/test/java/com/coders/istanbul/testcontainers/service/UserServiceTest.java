@@ -1,9 +1,10 @@
-package com.coders.istanbul.testcontainers;
+package com.coders.istanbul.testcontainers.service;
 
 import com.coders.istanbul.testcontainers.builder.UserBuilder;
 import com.coders.istanbul.testcontainers.domain.User;
 import com.coders.istanbul.testcontainers.model.dto.UserQueueDto;
 import com.coders.istanbul.testcontainers.repository.UserRepository;
+import com.coders.istanbul.testcontainers.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
