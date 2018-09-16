@@ -1,4 +1,4 @@
-package com.coders.istanbul.testcontinerstdd;
+package com.coders.istanbul.testcontainers;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
