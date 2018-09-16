@@ -1,4 +1,4 @@
-package com.coders.istanbul.testcontainers;
+package com.coders.istanbul.testcontainers.service;
 
 
 import com.coders.istanbul.testcontainers.domain.User;
